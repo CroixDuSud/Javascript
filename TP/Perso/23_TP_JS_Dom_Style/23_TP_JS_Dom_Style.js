@@ -5,6 +5,9 @@ function press()
 	var preuve = document.getElementById("idDivPreuve");
 	preuve.style.display = "initial";
 
+	/*=========== Autre méthode ==============
+	baliseImg.src = "images/shadow-proof.jpg";
+	========================================*/
 }
 
 function depress()
