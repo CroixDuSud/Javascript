@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 chapitre 7 : les fonctions
+-->
+<html>
+    <head>
+        <title>7_Exemple-01_Fonction</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function multiplier1(a, b) {
+                return a*b;
+            }
+            function multiplier2(a, b) {
+                var b = typeof b !== 'undefined' ? b : 1;
+                return a*b;
+            }
+            function multiplier3(a, b=1) {
+                return a*b;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <script>
+                alert(multiplier1(5));  // affiche NaN
+                alert(multiplier2(5));  // affiche 5
+                alert(multiplier3(5));  // affiche 5
+                alert(multiplier2(5, 4));   // affiche 20
+                alert(multiplier1(5, undefined));
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 chapitre 8 : test sur l'objet Boolean
+-->
+<html>
+    <head>
+        <title>8_Exemple-01_Boolean</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var b1 = new Boolean(0);
+            var b2 = new Boolean(1);
+            var b3 = new Boolean("");
+            var b4 = new Boolean(null);
+            var b5 = new Boolean(NaN);
+            var b6 = new Boolean("false");
+            var b7 = new Boolean("true");
+            var b8 = new Boolean(new Date());
+
+            document.write("<h3>0 est un boolean : " + b1 + "</h3>"); // affiche false
+            document.write("<h3>1 est un boolean : " + b2 + "</h3>"); // affiche true
+            document.write("<h3>Une chaine vide est un boolean : " + b3 + "</h3>"); // affiche false
+            document.write("<h3>null est un boolean : "+ b4 + "</h3>"); // affiche false
+            document.write("<h3>NaN est un boolean : " + b5 + "</h3>"); // affiche false
+            document.write("<h3>La chaine 'false' est un boolean " + b6 + "</h3>"); // affiche true
+            document.write("<h3>La chaine 'true' est un boolean " + b7 + "</h3>"); // affiche true
+            document.write("<h3>L'objet Date est un boolean " + b8 + "</h3>"); // affiche true
+        </script>
+    </body>
+</html>

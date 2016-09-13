@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 chapitre 6 : Les tableaux en javascript
+        utilisation des 2 syntaxes d'itération
+-->
+<html>
+    <head>
+        <title>6_Exemple-01_Tableau</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script type="text/javascript">
+                function hasard(N) {
+                    return Math.floor(Math.random() * N) + 1;
+                }
+                document.write("Tableau de 10 nombres au hasard<br>");
+                max = prompt("Nombres au hasard de 1 à ", "100");
+                tab = new Array(10);   // déclaration du tableau de 100 éléments
+                // remplissage par la fonction hasard()
+                for (var i = 0; i < tab.length; i++) {
+                    tab[i] = hasard(max);
+                }
+                tab.sort();   // tri du tanleau
+				tab.reverse();
+                // affichage du tableau
+                for (var indice in tab) {
+                    document.write("tab [", indice, "] = ", tab[indice], "<br>");
+                }
+            </script>
+        </div>
+    </body>
+</html>

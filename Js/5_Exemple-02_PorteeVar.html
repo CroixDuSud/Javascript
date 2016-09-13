@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Exemple 02 cahpitre 5 : la portée des variables
+-->
+<html>
+    <head>
+        <title>5_Exemple-02_PorteeVar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <SCRIPT language="Javascript">
+           var a = 12;		//   « a » est une variable globale
+           b = 4;		//   « b » est une variable globale
+           var c = 5;		//   « c » est une variable globale
+           d = 9;		//   « d » est une variable globale
+           
+           function MultipliePar2( b ) {
+              var a = b * 2;	//   « a » est une variable locale
+                                //  la variable globale a est masquée
+              b = 7;    	//   « b » est une variable locale
+                                //  la variable globale b est masquée
+              e = 3;    	//   « e » est une variable globale
+              alert("a = " + a + "\nb = " + b + "\nc = " + c + "\nd = " + d + "\ne = " + e);
+              return a;
+            }
+
+           document.write("<h2>Le double de ",b," est ",MultipliePar2(b),"</h2><br>");	//  affiche 8
+			document.write("<h2>La valeur de b est ",b);
+           document.write("<h2>La valeur de a est ",a,"</h2><br>");	//   affiche 12
+           document.write("<h2>La valeur de e est ",e,"</h2><br>");	//   affiche 3
+        </script>
+    </body>
+</html>

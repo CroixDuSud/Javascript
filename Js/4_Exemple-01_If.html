@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 chapitre 4 : l'instruction if et les boites de dialogue
+    alert() : affiche une boite de message, attend la validation ou Echap
+    prompt() : permet la saisie d'un texte (même si valeur numérique)
+                renvoi la saisie sur validation : appui sur Ok ou return
+            (renvoi la chaine par défaut (2ème paramètre) si rien n'est saisi)
+                renvoi null par abandon : appui sur Annul ou Echap
+-->
+<html>
+    <head>
+        <title>4_Exemple-01_If</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var prenom = "";
+            var section = "";
+            prenom = prompt("Saisissez votre prénom", "");
+            section = prompt("Saisissez votre section", "");
+            if (prenom != null && section != null)
+                if (prenom != "" && section != "")
+                    document.write("Bonjour " + prenom + "!<br>Vous etes en " + section + "<br>");
+                else
+                    document.write("saisie incomplète");
+            else
+                document.write("Vous avez annulé !");
+        </script>
+    </body>
+</html>

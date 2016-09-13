@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+Exemple 02 chapitre 8 : utilisation de l'objet Date
+-->
+<html>
+    <head>
+        <title>8_Exemple-02_Date</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var date = new Date();
+            //var annee = date.getYear() + 1900;
+            var annee = date.getFullYear();
+            var mois = date.getMonth() + 1;
+            var jour = date.getDate();
+            document.write("<h3>Date " + jour + " / " + mois + " / " + annee + "</h3>");
+            document.write("<h3>Heure " + date.getHours() + " : " + date.getMinutes() + 
+                    " : " + date.getSeconds() + "</h3>");
+        </script>
+    </body>
+</html>

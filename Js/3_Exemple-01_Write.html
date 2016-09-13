@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 chapitre 3 : test de la méthode write() de l'objet document
+-->
+<html>
+    <head>
+        <title>3_Exemple-01_Write</title>
+
+        <script type="text/javascript">
+
+            function nouveauContenu()
+            {
+                alert("chargement du nouveau contenu");
+                // écriture dans un nouveau document : l'ancien est vidé
+                //document.open();   // appelé par défaut
+                document.write("<h1>Assez de l'ancien contenu, passons au nouveau !</h1>");
+                //document.close();  // conseillé
+            }
+
+        </script>
+    </head>
+
+    <body onload="nouveauContenu();">
+        <p>Ceci est un test de document.write()</p>
+        <br>
+        <script type="text/javascript">
+            // écriture dans le document déjà ouvert : body contient la balise h1
+            document.write("<h1>Ceci est le contenu original du document.</h1>");
+			alert("essai");
+        </script>
+    </body>
+</html>
