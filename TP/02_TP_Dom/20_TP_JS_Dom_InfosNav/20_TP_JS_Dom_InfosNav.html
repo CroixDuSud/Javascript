@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+TP : Affichage des infos du navigateur
+-->
+<html>
+    <head>
+        <title>20_TP_JS_Dom_InfosNav : Infos du navigateur</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+    <body>
+    <h1>Informations de votre navigateur</h1>
+	<script>
+		document.write("<h2>Code du navigateur : ", navigator.appCodeName, "</h2>");
+		document.write("<h2>Nom du navigateur : ", navigator.appName, "</h2>");
+		document.write("<h2>Numéro de version du navigateur : ", navigator.appVersion, "</h2>");
+		document.write("<h2>Nom du moteur du navigateur : ", navigator.product, "</h2>");
+		document.write("<h2>Les cookies sont autorisés : ", navigator.cookieEnabled, "</h2>");
+		document.write("<h2>Plateforme de compilation : ", navigator.platform, "</h2>");
+		document.write("<h2>Entête envoyée au serveur : ", navigator.userAgent, "</h2>");
+		document.write("<h2>Langage du navigateur : ", navigator.language, "</h2>");
+		document.write("<h2>Navigateur en ligne : ", navigator.online, "</h2>");
+	</script>
+    <h1>Informations de votre configuration écran</h1>
+	<script>
+		document.write("<h2>Largeur : ",screen.width, "</h2>");
+		document.write("<h2>Hauteur : ",screen.height, "</h2>");
+		document.write("<h2>Largeur utilisable : ",screen.availWidth, "</h2>");
+		document.write("<h2>Hauteur utilisable : ",screen.availHeight, "</h2>");
+		document.write("<h2>Profondeur de couleur : ",screen.colorDepth, "</h2>");
+		document.write("<h2>Résolution de couleur : ",screen.pixelDepth, "</h2>");
+	</script>
+    <h1>Informations de la fenêtre de votre navigateur</h1>
+	<script>
+		document.write("<h2>Largeur (sans barre d'outils et barre de défilement) : ", window.innerWidth, "</h2>");
+		document.write("<h2>Hauteur sans barre d'outils et barre de défilement) : ", window.innerHeight, "</h2>");
+		document.write("<h2>Largeur (avec barre d'outils et barre de défilement) : ", window.outerWidth, "</h2>");
+		document.write("<h2>Hauteur (avec barre d'outils et barre de défilement) : ", window.outerHeight, "</h2>");
+	</script>
+    </body>
+</html>

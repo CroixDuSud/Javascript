@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+    22_TP_JS_Dom_Input.html
+    DB 2015
+-->
+<html>
+    <head>
+        <title>Modifier le contenu d'une balise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function modif() {
+                //alert(document.forms[0].elements[0].value);
+                //var nom = document.forms[0].idNom.value;
+                var nom = document.monForm.nom.value;
+                var prenom = document.forms[0].prenom.value;
+                if (nom != "" && prenom != ""){
+                    document.write("<h1>Modifier le contenu d'une balise</h1>");
+                    document.write("<h1>Bonjour " + nom + " " + prenom + "</h1>");
+                } else {
+                    alert("le nom ou le prénom est vide");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Modifier le contenu d'une balise</h1>
+        <div>
+            <form name="monForm" action="#">
+                <label for="nom">Entrer votre nom </label>
+                <input type="text" name="nom" id="idNom" /><br />
+                <label for="prenom">Entrer votre prénom </label>
+                <input type="text" name="prenom" id="idPrenom" /><br /><br />
+                
+                <button onclick="modif()">Modifier</button>
+            </form>
+        </div>
+
+    </body>
+</html>

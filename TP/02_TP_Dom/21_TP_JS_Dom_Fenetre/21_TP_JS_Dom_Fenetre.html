@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+21_TP_JS_Dom_Fenetre.html
+DOM : TP sur la gestion des fenêtres
+-->
+<html>
+    <head>
+        <title>Gestion de Fenetres</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var fenetre = null;
+            var options = "width=200,height=200,toolbar=yes,directories=no,"+
+                            "menubar=no,scrollbars=yes,status=yes";
+                            
+            function ouvreFen() {
+                if (fenetre == null || fenetre.closed){
+                    fenetre = open("", "Fenetre Fille", options);
+                    fenetre.document.title = "Fenetre Fille";
+                    fenetre.document.write("<h2>Je suis une fille</h2>");
+                } else {
+                    fenetre.focus();
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <div>
+            <h2>TP sur la gestion des fenêtres</h2>
+            <br>
+            <input type="button" value="Nouvelle fenêtre" onclick="ouvreFen()"/>
+            <input type="button" value="fermer" onclick="fenetre.close()"/>
+            <input type="button" value="Taille +" onclick="fenetre.resizeBy(50, 50)"/>
+            <input type="button" value="Taille -" onclick="fenetre.resizeBy(-50, -50)"/>
+            <br>
+            <input type="button" value="Montrer" onclick="fenetre.focus()"/>
+        </div>
+    </body>
+</html>
