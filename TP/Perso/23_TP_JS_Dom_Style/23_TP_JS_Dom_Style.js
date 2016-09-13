@@ -1,11 +1,19 @@
 function press()
 {
-	var a = document.getElementById("idDivImage");
-	var b = document.getElementById("idImage")
-	document.getElementById(a).removeChild(b);
-	//document.getElementById("idDivImage").innerHTML ="";
-/*
-	document.getElementById("idImage").innerHTML = 
-	"<img id="idImage2" src="images/shadow-proof.jpg" alt="Preuvre">";
-*/
+	var baliseDiv = document.getElementById("idDivImage");
+	var baliseImg = document.getElementById("idImage");
+	baliseImg.setAttribute("src", "images/shadow-proof.jpg");
+	var preuve = document.getElementById("idDivPreuve");
+	preuve.style.display = "initial";
+
 }
+
+function depress()
+{
+	var baliseDiv = document.getElementById("idDivImage");
+	var baliseImg = document.getElementById("idImage");
+	baliseImg.setAttribute("src", "images/shadow-illusion.jpg");
+	var preuve = document.getElementById("idDivPreuve");
+	preuve.style.display = "none";
+}
+
