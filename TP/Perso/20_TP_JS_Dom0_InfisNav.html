@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<title></title>
+</head>
+<body>
+
+	<div id="infoNav">
+	<h1>Informations sur votre navigateur</h1>
+		<script type="text/javascript">
+			document.writeln("Votre navigateur est de code : "+navigator.appCodeName+"<br><br>");
+			document.writeln("Votre navigateur porte le nom : "+navigator.appName+"<br><br>");
+			document.writeln("Son numéro de version est : "+navigator.appVersion+"<br><br>");
+			document.writeln("Les cookies sont autorisés : "+navigator.cookieEnabled+"<br><br>");
+			document.writeln("Votre plateforme : "+
+				navigator.plateform+"<br><br>");
+			document.writeln("Votre entête : "+
+				navigator.userAgent+"<br><br>");
+			document.writeln("Votre langage actuel : "+
+				navigator.systemLanguage+"<br><br>");
+		</script>
+	</div>
+	<div>
+		<h1>Informations de votre configuration écran</h1>
+		<script type="text/javascript">
+			document.writeln("Largeur : "+
+				screen.width+"<br><br>");
+			document.writeln("Hauteur : "+
+				screen.height+"<br><br>");
+			document.writeln("Largeur utilisable : "+
+				screen.avail.Width+"<br><br>");
+			document.writeln("Hauteur utilisable : "+
+				screen.avail.Height+"<br><br>");
+			document.writeln("Profondeur de couleur : "+
+				screen.colorDepth+"<br><br>");
+			document.writeln("Résolution de couleur : "+
+				screen.pixelDepth+"<br><br>");
+		</script>
+	</div>
+	<div>
+		<h1>Informations de la fenêtre de votre navigateur</h1>
+		<script type="text/javascript">
+			document.writeln("Largeur (sans barre d'outils et barre de défilement) : "+
+				window.innerWidth+"<br><br>");
+			document.writeln("Hauteur (sans barre d'outils et barre de défilement) : "+
+				window.innerHeight+"<br><br>");
+			document.writeln("Largeur (avec barre d'outils et de défilement) : "+
+				window.outerWidth+"<br><br>");
+			document.writeln("Hauteur (avec barre d'outils et barre de défilement) : "+
+				window.outerHeight+"<br><br>");
+		</script>
+	</div>
+</body>
+</html>
