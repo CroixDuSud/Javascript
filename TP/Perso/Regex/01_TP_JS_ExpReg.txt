@@ -1,6 +1,6 @@
 ﻿<!-- TP_1 sur les expressions régulères --!>
 
-Numéro de téléphone : ^0\d([ .-])\d{2}(\1\d\d){3}$
+Numéro de téléphone : ^0\d([ .-])\d{2}(\1\d{2}){3}$
 
 Numéro d'Insee : [12]\ \d\d\1(0[1-9])|(1[0-2])\ ([0-8]\d)|(9[^a-z89])\ \d{3}\ \d{3}\ \/\ \d\d$
 
