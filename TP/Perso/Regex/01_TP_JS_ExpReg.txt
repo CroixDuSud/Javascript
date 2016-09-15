@@ -6,6 +6,11 @@ Numéro d'Insee : [12]\ \d\d\1(0[1-9])|(1[0-2])\ ([0-8]\d)|(9[^a-z89])\ \d{3}\ \
 
 (ne gère pas les contraintes des 3 chiffres de la ville (001-990) et de 2 chiffres de la clef (01-97))
 
-Adresse mail : ^[a-z][a-zA-Z0-9._-]{0,63}@[a-z0-9._-]+\.[a-z]{2,4}$
+Adresse mail : ^[a-z_][a-zA-Z0-9._-]{0,63}@[a-z0-9._-]+\.[a-z]{2,4}$
+
+					Variante :
+
+		^[a-z_][\w\W\d._-]{0,63}@[a-z0-9._-]+\.[a-z]{2,4}$
+
 
 URL : ^((http)|(https)|(ftp)):\/\/(w{3}\.[a-z0-9-]+\.[a-z]{2,4})|([a-z0-9-]+\.[a-z]{2,4})
