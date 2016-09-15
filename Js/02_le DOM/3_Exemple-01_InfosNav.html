@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+Exemple 01 Dom0 : Affichage des infos du navigateur
+-->
+<html>
+    <head>
+        <title>3_Exemple-01_InfosNav</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <h1>Informations de votre navigateur</h1>
+	<script>
+            document.write("<h2>Plateforme de compilation : ", navigator.platform, "</h2>");
+            document.write("<h2>Nom du navigateur : ", navigator.appName, "</h2>");
+            document.write("<h2>Code du navigateur : ", navigator.appCodeName, "</h2>");
+            document.write("<h2>Entête envoyée au serveur : ", navigator.userAgent, "</h2>");
+            document.write("<h2>Langage du navigateur : ", navigator.language, "</h2>");
+	</script>
+    </body>
+</html>

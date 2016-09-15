@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Exemple 04 chapitre 8 : utilisation de l'objet RegExp
+-->
+<html>
+    <head>
+        <title>8_Exemple-04_RegExp</title>
+        <meta charset="UTF-8">
+        <script>
+            function demoTestClick() {
+                var re = new RegExp(document.demo.regex.value, "g");
+                //if (document.demoMatch.subject.value.match(re)) {
+                if (re.test(document.demo.subject.value)) {
+                    alert("Motif trouvé");
+                } else {
+                    alert("motif non trouvé");
+                }
+            }
+
+            function demoExecClick() {
+                // démontrer avec [a-z]+t\b\s(sur)
+                var re = new RegExp(document.demo.regex.value);
+                var m = re.exec(document.demo.subject.value);
+                if (m == null) {
+                    alert("Pas de motif trouvé");
+                } else {
+                    var s = "Trouvé à la position " + m.index + ":\n";
+                    for (i = 0; i < m.length; i++) {
+                        s = s + m[i] + "\n";
+                    }
+                    alert(s);
+                }
+            }
+
+            function demoReplaceClick() {
+                // tester avec motif : (.*)(ur)(.*)(Javascript)
+                // chaine remplacement : $1$4 $2$3
+                var re = new RegExp(document.demo.regex.value, "g");
+                document.demo.result.value =
+                        document.demo.subject.value.replace(re,
+                                document.demo.replacement.value);
+                while (re.test(document.demo.subject.value))
+                    with (RegExp) {
+                        S = "lastIndex = " + re.lastIndex + "\nleftContext = " + leftContext + "\nrightContext = " + rightContext + "\nlastMatch = " + lastMatch + "\nlastParen = " + lastParen;
+                        S += "\n$1 = " + $1 + " $2 = " + $2 + " $3 = " + $3 + "\n$4 = " + $4 + " $5 = " + $5 + " $6 = " + $6;
+                        alert(S);
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Test d'expressions régulières</h2>
+        <br/>
+        <form id="demo" name="demo" method="POST" action="javascript:void(0)">
+            <p> Motif : <input type="text" name="regex" value="([a-z]+t\b)" size="50"></p>
+            <p> Chaine : <input type="text" name="subject" value="Ceci est un test sur les expressions régulières Javascript" size="80"></p>
+            <p>
+                <input type="submit" value="Test de correspondance" onclick="demoTestClick()">
+                <input type="submit" value="Montrer la correspondance" onclick="demoExecClick()">
+            </p>
+
+            <p> Texte de remplacement : <input type="text" name="replacement" value="texte" size="80"></P>
+            <p> Résultat : <input type="text" name="result" value="cjiquez sur le bouton" size="80"></P>
+            <p><input type="submit" value="Remplacer" onclick="demoReplaceClick()"></P>
+        </form>
+    </body>
+</html>

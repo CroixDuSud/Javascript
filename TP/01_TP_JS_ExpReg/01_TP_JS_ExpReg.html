@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+AfpaCréteil CDI
+DB 2015
+01_TP_JS_ExpReg.html
+-->
+<html>
+    <head>
+        <title>Test d'expressions régulières</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="01_TP_JS_ExpReg.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h2>Test d'expressions régulières</h2>
+        <br/>
+        <form method="POST" action="javascript:void(0)">
+            <p> Motif RegEx: <input type="text" id="idRegEx" placeholder="entrez l'expression régulière" size="100" onkeypress="raz()"></p>
+            <p> Chaine à tester : <input type="text" id="idChaine" placeholder="entrez la chaine à tester" size="50" onkeypress="raz()"></p>
+            <!--p>
+            <input type="submit" value="Test de correspondance" onclick="MatchClick()">
+            <input type="submit" value="Montrer la correspondance" onclick="demoShowMatchClick()">
+            </p-->
+
+            <p> Résultat : <input type="text" id="idResult"  size="50" readonly></P>
+            <p>
+                <input type="submit" value="Tester" onclick="testMatch()">
+                <input type="reset" value="RaZ">
+            </P>
+        </form>
+</html>

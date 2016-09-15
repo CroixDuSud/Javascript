@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Exemple 02 Dom0 : Affichage des plugins du navigateur
+-->
+<html>
+    <head>
+        <title>3_Exemple-02_Plugins</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Plugins de votre navigateur</h1>
+        <script type="text/javascript">
+            if (navigator.plugins) {
+                document.writeln("<table border=\"1\">");
+                for (var i = 0; i < navigator.plugins.length; i++) {
+                    document.writeln("<tr>");
+                    document.writeln("<td>" + navigator.plugins[i].name + "</td>");
+                    document.writeln("<td>" + navigator.plugins[i].description + "</td>");
+                    document.writeln("<td>" + navigator.plugins[i].filename + "</td>");
+                    document.writeln("</tr>");
+                }
+                document.writeln("</table>");
+            } else
+                document.write('Pas de plugin !');
+        </script>
+    </body>
+</html>
