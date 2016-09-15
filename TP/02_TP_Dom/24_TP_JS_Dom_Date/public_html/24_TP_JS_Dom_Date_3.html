@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+AfpaCréteil CDI
+DB 2015
+24_TP_JS_Dom_Date_3.html
+-->
+<html>
+    <head>
+        <title>Calcul de date</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="24_TP_JS_Dom_Date_3.js" type="text/javascript"></script>
+        <style>
+            div {
+                width: 500px;
+                margin: 0 auto;
+            }
+            label{
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Calcul de date</h2>
+        <form>
+            <fieldset>
+                <legend> Entrez votre date de naissance</legend>
+                <br />
+                <label for="idCbxAnnee">année </label><select id="idCbxAnnee"></select>
+                <label for="idCbxMois">mois </label><select id="idCbxMois"></select>
+                <label for="idCbxJour">jour </label><select id="idCbxJour" style="width:30px"></select>
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend> Sélectionnez l'unité</legend>
+                <input type="radio" id="idOptJour" name="choixUnit" checked="checked" /><label for="idOptJour"> jours</label><br />
+                <input type="radio" id="idOptMois" name="choixUnit" /><label for="idOptMois"> mois</label><br />
+                <input type="radio" id="idOptAnnee" name="choixUnit" /><label for="idOptAnnee"> années</label><br />
+            </fieldset>
+            <input type="button" id="idBtnCalcul" value="Calculer" />
+        </form>
+        </div>
+    </body>
+</html>
