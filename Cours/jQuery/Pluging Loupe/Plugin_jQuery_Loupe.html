@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Plugin_jQuery_Loupe : HTML5 canvas - Effet de loupe sur une image</title>
+        <link href="Plugin_jQuery_Loupe.css" rel="stylesheet" type="text/css" />
+        <script src="jquery-1.7.1.min.js"></script>
+        <script src="Plugin_jQuery_Loupe.js"></script>
+        <script>
+            $(function ()
+            {
+                $('#image1').loupe({
+                    "srcImage": "Images/img01.jpg"
+                });
+                $('#image2').loupe({
+                    "srcImage": "Images/img02.jpg"
+                });
+              });
+        </script>
+    </head>
+    <body>
+        <span></span>
+        <div class="contenu">
+            <canvas id="image1" width="300" height="400"></canvas>
+            <canvas id="image2" width="200" height="270"></canvas>
+        </div>
+    </body>
+</html>
